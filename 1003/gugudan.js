@@ -1,14 +1,14 @@
 // 화살표 함수
 const gugudan1st = (dan) => {
   for (let i=1; i <= 9; i++){
-      console.log(`${dan} * ${i} = ${dan * i}`)
+      console.log(`${dan} * ${i} = ${dan * i}`);
   }
 };
 
 // 함수 선언문
 function gugudan2nd(dan){
     for (let i = 1; i <= 9; i++){
-        console.log(`${dan} * ${i} = ${dan * i}`)
+        console.log(`${dan} * ${i} = ${dan * i}`);
     }
 };
 
