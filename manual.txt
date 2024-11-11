@@ -832,7 +832,61 @@
 
         객체의 키 식별자에 공백이 있다면 마침표 연산자는 사용할 수 없고 대괄호 연산자로만 접근할 수 있다. 」　24.11.10(일)
 
-11.2.2
+24.11.11(월)
+
+11.2.2 객체 속성 값 변경하기
+    객체로 정의된 값을 바꾸고 싶다면 키로 속성에 접근해서 값을 재할당하면 된다.
+    다음 코드는 변수 person에 할당된 객체의 속성에 키로 접근해 값을 변경한다.
+        //코드
+        const person = {
+            name:"Junhyung Park"
+        };
+        person.name = "Kim"; // 또는 person["name"] = "Kim";
+        console.log(person.name); //Kim
+
+11.2.3 객체 속성 동적으로 추가하기
+    객체 속성에 키로 접근해 값을 재할당하면 기존 속성값을 변경할 수 있다.
+    그런데 해당 키가 객체에 없다면 즉 객체에 없는 속성이라면 해당 키와 값으로 구성된 새로운 속성이 객체에 추가된다.
+    예를들어 먼저 객체 리터럴 방식으로 빈 객체를 생성하고 변수에 할당한다.
+    그리고 객체의 속성에 접근해 값을 변경할 때처럼 키에 값을 할당한다.
+    person 객체를 출력해보면 처음엔 빈 객체였는데 나중에 name 속성이 추가 된 것을 볼 수 있다.
+    이처럼 객체 속성에 값을 할당해 접근하면 해당 속성이 존재하는지 확인하고, 없는 속성이면 해당 키와 값으로 구성된 새로운 속성을 객체에 추가한다.
+        //코드
+        const person = {};
+        console.log(person); // {}
+        person.name = "Junhyung Park";
+        console.log(person); // { name: 'Junhyung Park' }
+
+    정리하면 객체 식별자와 키에 마침표 연산자를 사용하면 객체의 속성에 접근하게 되고
+    속성에 접근하여 할당 연산자로 값을 할당하면 값이 변경되거나 새로운 속성이 추가된다.
+
+    객체 속성의 값이 함수나 배열 객체 리터럴일 때도 같은 방법으로 값을 변경하거나 새로운 속성을 추가할 수 있다.
+        //코드
+        const person = {};
+        person.name = {
+            firstName:"Junhyung"
+            , lastName:"Park"
+        };
+        person.likes = ["apple","samsung"];
+        person.printHello = function (){
+            return "hello";
+        }
+    이렇게 이미 만들어진 객체에 나중에 속성을 추가하는 것을 '속성을 동적으로 추가한다' 고 한다
+
+11.2.4 객체 속성 동적으로 삭제하기
+    객체 속성에 접근할 때 앞에 delete 키워드를 명시하면 해당 속성이 삭제된다.
+    다음처럼 delete 키워드로 person 객체의 하나뿐인 name 속성을 삭제하고 person 객체를 출력해보면 빈 객체가 출력된다.
+        //코드
+        const person = {
+            name : "Junhyung Park"
+        };
+        delete person.name; // 또는 delete person["name"]
+        console.log(person); // {} 출력 」　24.11.11(월)
+
+11.2.5
+
+
+
 
 
 
