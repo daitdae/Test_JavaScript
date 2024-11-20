@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box-1">
+        <p class="text">text1</p>
+        <p class="text">text2</p>
+    </div>
+    <div class="box2">
+        <p class="text">text-3</p>
+        <p class="text">text-4</p>
+    </div>
+
+    <script>
+        // const el = document.querySelector(".box-1");
+        // const elP = document.getElementsByClassName("box-1")[0].children;
+        // console.log(elP);
+        const el = document.querySelectorAll(".box-1 .text");
+        console.log(el);
+    </script>
+</body>
+</html>

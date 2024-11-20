@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <a href="https://www.gilbut.co.kr">길벗</a>
+  <script>
+    const aEl = document.querySelector("a");
+    const href = aEl.getAttribute("href");
+    aEl.setAttribute("href","https://www.naver.com/");
+    aEl.innerText = "네이버";
+    aEl.setAttribute("target","_blank");
+  </script>
+</body>
+</html>

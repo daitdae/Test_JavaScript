@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .red-color{
+            color:red;
+        }
+        .fz20{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <p id="text">text</p>
+    <script>
+        const pEl = document.querySelector("#text"); // 노드 선택
+
+        // 1초마다 toggle()메서드 반복실행
+        setInterval(function (){
+            pEl.classList.toggle("red-color");
+        }, 1000);
+    </script>
+</body>
+</html>

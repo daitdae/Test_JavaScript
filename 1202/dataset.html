@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button data-cnt="10">가방 구매</button>
+    <button data-cnt="0">신발 구매</button>
+    <script>
+        const buttonEls = document.querySelectorAll("button");
+        // buttonEls.forEach((el)=>{
+        //     console.log(el.dataset);
+        //     })
+        // buttonEls.forEach((el)=>{
+        //     console.log(el.dataset.cnt); // 실행결과: 10 0
+        // })
+        buttonEls.forEach((el)=>{
+            el.dataset.cnt = 50;
+        })
+    </script>
+</body>
+</html>

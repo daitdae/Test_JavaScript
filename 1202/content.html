@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="title">Hello, <span style="display: none">Javascript</span></p>
+    <!-- 이 코드를 콘텐츠 조작 속성으로 접근했을 때 각 속성이 가져오는 콘텐츠는 다음과 같다 -->
+    <script>
+       document.getElementById("title").textContent; // Hello, Javascript
+       document.getElementById("title").innerText; // Hello,
+       document.getElementById("title").innerHTML; // Hello, <span style="display: none">Javascript</span>
+    </script>
+</body>
+</html>
