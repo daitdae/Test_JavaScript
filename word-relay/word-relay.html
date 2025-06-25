@@ -7,6 +7,40 @@
         const number = Number(prompt('参加者は何人ですか？'));
         const $input = document.querySelector('input'); //input tag 選択
         const $button = document.querySelector('button'); //botton tag 選択
+        const $word = document.querySelector('#word');
+        const $order = document.querySelector('#order');
+
+        let newWord; //現在単語
+        let word; //提示語
+        const onInput = (event) => {
+            newWord = event.target.value; //入力した単語を現在単語でセーブ
+        };
+        const onClickButton = () => {
+            if (!word){ //提示語が空いているのか？
+                word = newWord; //入力した単語が提示語になる
+                $word.textContent = word; //画面に提示語表示
+                    const order = Number($order.textContent);
+                    if (order + 1 > number){
+                        $order.textContent = 1;
+                    } else{
+                        $order.textContent = order + 1;
+                    }
+            }　else{
+                if (word.at(-1) === newWord[0]){ //提示語に合う単語か？
+                    //合う単語
+                    word = newWord; //現在単語を提示語にセーブ
+                    $word.textContent = word; // 画面に提示語表示
+                        const order = Number($order.textContent);
+                        if (order + 1 > number){
+                            $order.textContent = 1;
+                        } else{
+                            $order.textContent = order + 1;
+                        }
+                }　else{ //合わない単語
+
+                }
+            }
+        };
     </script>
 </head>
 <body>
