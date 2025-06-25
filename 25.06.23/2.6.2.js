@@ -12,7 +12,13 @@
 // a();
 // a();
 
+// function a(){
+//     return 10;
+// }
+// a();
+
 function a(){
     return 10;
 }
-a();
+const b = a();
+b;
